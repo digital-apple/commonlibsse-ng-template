@@ -1,15 +1,15 @@
 #pragma once
 
-#define ERROR(message, ...) SKSE::log::error(message, ##__VA_ARGS__)
-#define INFO(message, ...) SKSE::log::info(message, ##__VA_ARGS__)
-#define TRACE(message, ...) SKSE::log::trace(message, ##__VA_ARGS__)
-#define WARN(message, ...) SKSE::log::warn(message, ##__VA_ARGS__)
-
 #include <RE/Skyrim.h>
 #include <SKSE/SKSE.h>
 
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/msvc_sink.h>
+
+#define ERROR(message, ...) SKSE::log::error(message, ##__VA_ARGS__)
+#define INFO(message, ...) SKSE::log::info(message, ##__VA_ARGS__)
+#define TRACE(message, ...) SKSE::log::trace(message, ##__VA_ARGS__)
+#define WARN(message, ...) SKSE::log::warn(message, ##__VA_ARGS__)
 
 namespace stl
 { 

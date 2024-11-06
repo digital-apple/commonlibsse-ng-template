@@ -36,7 +36,7 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 {
     InitializeLogger();
 
-   SKSE::Init(a_skse);
+    SKSE::Init(a_skse);
 
     const auto messaging_interface = SKSE::GetMessagingInterface();
 
@@ -44,5 +44,5 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 
     messaging_interface->RegisterListener(HandleMessage);
 
-   return true;
+    return true;
 }

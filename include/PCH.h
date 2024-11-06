@@ -12,15 +12,15 @@
 #include <spdlog/sinks/msvc_sink.h>
 
 namespace stl
-{
+{ 
     using namespace SKSE::stl;
 
-   template <class T, std::size_t index, class U>
-   void write_vfunc()
-   {
-      REL::Relocation VTABLE{ T::VTABLE[0] };
-      U::Callback = VTABLE.write_vfunc(index, U::Call);
-   }
+    template <class T, std::size_t index, class U>
+    void write_vfunc()
+    {
+       REL::Relocation VTABLE{ T::VTABLE[0] };
+       U::Callback = VTABLE.write_vfunc(index, U::Call);
+    }
    
     template <class T>
     void write_vfunc_call(std::uintptr_t a_source)
